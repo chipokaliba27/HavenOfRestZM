@@ -1,20 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hope Family Ministry</title>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haven of Rest | Health & Homestead</title>
+
+  <!-- Brand Font: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Haven of Rest Brand Colors */
+      --white: #ffffff;
+      --light-gray: #e3e3e3;
+      --sage: #a8c0b2;
+      --forest: #55906d;
+      --black: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+
+    nav a {
+      margin-left: 32px;
+      text-decoration: none;
+      color: var(--black);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .donate-btn {
+      padding: 10px 22px;
+      border: 1px solid var(--forest);
+      border-radius: 999px;
+      color: var(--forest);
+      font-weight: 500;
+    }
+
+    .hero {
+      padding: 140px 20px 120px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero h2 {
+      font-size: 52px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 720px;
+      margin: auto;
+      color: #444;
+    }
+
+    .section {
+      padding: 100px 24px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 34px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .section p {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 72px;
+    }
+
+    .card {
+      padding: 40px;
+      border-radius: 20px;
+      background: var(--sage);
+    }
+
+    .card h4 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #222;
+    }
+
+    footer {
+      background: var(--forest);
+      color: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Hope Family Ministry</h1>
-  <p>We are a family-led nonprofit ministry serving vulnerable communities.</p>
 
-  <h2>Our Mission</h2>
-  <p>We provide support, compassion, and practical help to those in need.</p>
+<header>
+  <h1>HAVEN OF REST</h1>
+  <nav>
+    <a href="#">MISSION</a>
+    <a href="#">PROGRAMS</a>
+    <a href="#">GET INVOLVED</a>
+    <a href="#" class="donate-btn">DONATE</a>
+  </nav>
+</header>
 
-  <h2>Get Involved</h2>
+<section class="hero">
+  <h2>A Haven for Healing, Growth, and Hope</h2>
   <p>
-    <a href="#">Donate</a> |
-    <a href="#">Contact Us</a>
+    Haven of Rest is a faith-rooted family ministry creating safe, nurturing spaces
+    for vulnerable children to heal, grow, and rediscover hope through health,
+    homestead, and community.
   </p>
+</section>
+
+<section class="section">
+  <h3>Our Focus</h3>
+  <p>
+    Through holistic care, family-centered support, and sustainable living,
+    we walk alongside children and families toward restoration and dignity.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h4>Child-Centered Care</h4>
+      <p>Providing stability, safety, and nurturing environments for vulnerable children.</p>
+    </div>
+    <div class="card">
+      <h4>Health & Homestead</h4>
+      <p>Promoting wellness, self-sufficiency, and sustainable family living.</p>
+    </div>
+    <div class="card">
+      <h4>Faith & Community</h4>
+      <p>Grounded in faith, we partner with communities to create lasting impact.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 HAVEN OF REST · HEALTH & HOMESTEAD</p>
+</footer>
+
 </body>
 </html>
