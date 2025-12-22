@@ -7,149 +7,100 @@
 
   <!-- Brand Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
     :root {
-      --white: #ffffff;
-      --light-gray: #e3e3e3;
-      --sage: #a8c0b2;
-      --forest: #55906d;
-      --black: #000000;
+      --white:#ffffff;
+      --light:#f5f5f5;
+      --sage:#a8c0b2;
+      --forest:#55906d;
+      --black:#000000;
+      --gray:#999999;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Montserrat',sans-serif;line-height:1.7;color:var(--black);overflow-x:hidden}
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--black);
-      line-height: 1.7;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 48px;
-      background: var(--white);
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    header img { height: 42px; }
-
-    nav a {
-      margin-left: 28px;
-      text-decoration: none;
-      color: var(--black);
-      font-size: 14px;
-      letter-spacing: 1px;
-    }
-
-    .donate {
-      border: 1px solid var(--forest);
-      padding: 10px 22px;
-      border-radius: 999px;
-      color: var(--forest);
-    }
+    /* HEADER */
+    header{display:flex;justify-content:space-between;align-items:center;padding:24px 48px;background:white;border-bottom:1px solid #eee;position:sticky;top:0;z-index:100}
+    header img{height:42px}
+    nav a{margin-left:24px;text-decoration:none;font-size:14px;letter-spacing:1px;color:black}
+    .donate{border:1px solid var(--forest);padding:10px 22px;border-radius:999px;color:var(--forest)}
 
     /* HERO */
-    .hero {
-      position: relative;
-      height: 90vh;
-      background: url('hero.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .hero{width:100vw;min-height:100vh;margin-left:calc(-50vw + 50%);background:url('hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center}
+    .hero-overlay{background:rgba(0,0,0,.45);padding:96px 48px;text-align:center;color:white;max-width:900px;animation:fadeUp 1.2s ease}
+    .hero h1{font-size:48px;margin-bottom:24px}
+    .hero p{font-size:18px;margin-bottom:36px}
+    .hero-buttons a{display:inline-block;margin:12px;padding:16px 36px;border-radius:999px;text-decoration:none;font-weight:500;transition:.3s}
+    .hero-buttons a:hover{transform:translateY(-4px)}
+    .btn-primary{background:var(--forest);color:white}
+    .btn-secondary{border:2px solid white;color:white}
 
-    .hero-overlay {
-      background: rgba(0,0,0,0.45);
-      padding: 80px 40px;
-      text-align: center;
-      color: white;
-      max-width: 900px;
-    }
+    /* SECTIONS */
+    section{padding:100px 24px;max-width:1100px;margin:auto}
+    h2{text-align:center;font-size:36px;margin-bottom:24px}
+    section p{text-align:center;max-width:800px;margin:auto;font-size:18px}
 
-    .hero h1 {
-      font-size: 52px;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
+    /* FEATURE CARDS */
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:64px}
+    .feature{background:white;text-align:center}
+    .feature img{width:100%;border-radius:20px;margin-bottom:20px}
 
-    .hero-buttons a {
-      display: inline-block;
-      margin: 12px;
-      padding: 14px 32px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+    /* QUOTE */
+    .quote{background:white;padding:120px 24px;text-align:center;font-style:italic;font-size:28px}
 
-    .btn-primary { background: var(--forest); color: white; }
-    .btn-secondary { border: 2px solid white; color: white; }
+    /* SLIDESHOW */
+    .slider{position:relative;width:100vw;margin-left:calc(-50vw + 50%);overflow:hidden}
+    .slides{display:flex;animation:slide 18s infinite}
+    .slide{min-width:100vw;height:80vh;display:flex;align-items:center;justify-content:center;color:white;text-align:center;background-size:cover;background-position:center}
+    .slide-content{background:rgba(0,0,0,.45);padding:60px;max-width:700px}
+    .slide-content a{display:inline-block;margin-top:24px;padding:14px 32px;border-radius:999px;background:var(--forest);color:white;text-decoration:none}
 
-    /* SECTION */
-    section {
-      padding: 100px 24px;
-      max-width: 1100px;
-      margin: auto;
-    }
+    /* MAILING LIST */
+    .mailing{text-align:center}
+    .mailing input{border:none;border-bottom:1px solid black;padding:10px;margin:12px;width:240px}
+    .mailing button{background:black;color:white;border:none;padding:12px 28px;margin-top:20px}
 
-    section h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 24px;
-    }
+    /* SOCIAL */
+    .social{position:fixed;top:40%;left:16px;display:flex;flex-direction:column;gap:14px}
+    .social a{color:#aaa;font-size:18px;text-decoration:none}
 
-    section p {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-      font-size: 18px;
-    }
+    footer{background:var(--forest);color:white;text-align:center;padding:60px}
 
-    /* IMAGE GRID */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      margin-top: 64px;
+    @keyframes slide{
+      0%,30%{transform:translateX(0)}
+      33%,63%{transform:translateX(-100vw)}
+      66%,100%{transform:translateX(-200vw)}
     }
-
-    .image-grid img {
-      width: 100%;
-      border-radius: 20px;
-    }
-
-    footer {
-      background: var(--forest);
-      color: white;
-      padding: 80px 24px;
-      text-align: center;
-      margin-top: 80px;
-    }
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
   </style>
 </head>
 <body>
 
 <header>
-  <!-- ADD LOGO FILE: logo.png -->
   <img src="logo.png" alt="Haven of Rest Logo">
   <nav>
-    <a href="#">MISSION</a>
-    <a href="#">PROGRAMS</a>
-    <a href="#">GET INVOLVED</a>
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT</a>
+    <a href="#">BLOG</a>
+    <a href="#">MORE</a>
     <a href="#" class="donate">DONATE</a>
   </nav>
 </header>
 
-<!-- HERO IMAGE SECTION -->
-<!-- ADD HERO IMAGE: name it hero.jpg -->
+<div class="social">
+  <a href="#">YT</a>
+  <a href="#">IG</a>
+  <a href="#">FB</a>
+</div>
+
 <section class="hero">
   <div class="hero-overlay">
-    <h1>The only thing you can take to Heaven is other people</h1>
+    <h1>THE ONLY THING YOU CAN TAKE TO HEAVEN IS OTHER PEOPLE</h1>
+    <p>Haven of Rest seeks to increase the population of Heaven by caring for both the physical and spiritual needs of vulnerable and unreached communities.</p>
     <div class="hero-buttons">
       <a href="#" class="btn-primary">Get Involved</a>
       <a href="#" class="btn-secondary">Donate</a>
@@ -158,31 +109,34 @@
 </section>
 
 <section>
-  <h2>Who We Are</h2>
-  <p>
-    Haven of Rest is a faith-based family ministry committed to providing safety,
-    healing, and hope for vulnerable children through health, homestead, and
-    community-centered care.
-  </p>
-</section>
+  <h2>Offering Hope to the Hopeless</h2>
+  <p>Have you ever felt burdened to be a part of something big? To work or give more earnestly for the spiritual, physical, and mental wellbeing of those less fortunate in our world? Well look no further. Haven of Rest is an organization that is founded on service to Humanity.</p>
 
-<section>
-  <h2>Our Work in Action</h2>
-  <div class="image-grid">
-    <!-- ADD IMAGE 1: image1.jpg -->
-    <img src="image1.jpg" alt="Children supported by Haven of Rest">
-
-    <!-- ADD IMAGE 2: image2.jpg -->
-    <img src="image2.jpg" alt="Community and ministry work">
-
-    <!-- ADD IMAGE 3: image3.jpg -->
-    <img src="image3.jpg" alt="Hope and restoration">
+  <div class="features">
+    <div class="feature"><img src="academy.jpg"><h3>Academy</h3><p>Haven of Rest Academy is a faith based community school that provides…</p></div>
+    <div class="feature"><img src="nursing.jpg"><h3>Nursing Home</h3><p>Ensuring they receive not only physical assistance but also the emotional…</p></div>
+    <div class="feature"><img src="health.jpg"><h3>Health Centre</h3><p>Vulnerable communities struggle with treatable diseases due to the lack of…</p></div>
   </div>
 </section>
 
-<footer>
-  <p>© 2025 HAVEN OF REST · HEALTH & HOMESTEAD</p>
-</footer>
+<div class="quote">“Jesus went about doing good… Acts 10:38”</div>
+
+<div class="slider">
+  <div class="slides">
+    <div class="slide" style="background-image:url('slide1.jpg')"><div class="slide-content"><h2>Join the Team</h2><p>Do you feel called to give up a portion of your time to work in an unreached area?</p><a href="#">Volunteer</a></div></div>
+    <div class="slide" style="background-image:url('slide2.jpg')"><div class="slide-content"><h2>Want A Full Hands-On Experience in Mission Work?</h2><p>Is the Holy Spirit moving you to devote your life to His service?</p><a href="#">Join the Team</a></div></div>
+    <div class="slide" style="background-image:url('slide3.jpg')"><div class="slide-content"><h2>Make an Eternal Difference Today</h2><p>Through every penny, regardless of how small, someone gets to experience a better life</p><a href="#">Donate Now</a></div></div>
+  </div>
+</div>
+
+<section class="mailing">
+  <h2>Join Our Mailing List</h2>
+  <p>For exclusive opportunities and inspiring stories, join our Haven of Rest mailing list.</p>
+  <input placeholder="Name"><input placeholder="Email"><br>
+  <button>Subscribe</button>
+</section>
+
+<footer>© 2025 HAVEN OF REST · HEALTH & HOMESTEAD</footer>
 
 </body>
 </html>
