@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Haven of Rest</title>
+
+  <!-- Brand Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    :root {
+      --white:#ffffff;
+      --light:#f5f5f5;
+      --sage:#a8c0b2;
+      --forest:#55906d;
+      --black:#000000;
+      --gray:#666666;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Montserrat',sans-serif;line-height:1.7;color:var(--black);overflow-x:hidden}
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:24px 48px;background:white;border-bottom:1px solid #eee;position:sticky;top:0;z-index:100}
+    header img{height:42px}
+    nav a{margin-left:24px;text-decoration:none;font-size:14px;letter-spacing:1px;color:black}
+    .donate-btn{border:1px solid var(--forest);padding:10px 22px;border-radius:999px;color:var(--forest)}
+
+    /* HERO */
+    .hero{width:100vw;min-height:60vh;margin-left:calc(-50vw + 50%);background:url('donate-hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center}
+    .hero-overlay{background:rgba(0,0,0,.45);padding:80px 48px;text-align:center;color:white;max-width:900px}
+    .hero h1{font-size:48px;margin-bottom:16px}
+    .hero p{font-size:18px}
+
+    section{padding:100px 24px;max-width:1000px;margin:auto;text-align:center}
+    section h2{font-size:36px;margin-bottom:24px}
+    section p{font-size:18px;color:#444;max-width:760px;margin:0 auto 40px}
+
+    /* DONATION OPTIONS */
+    .donation-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:60px}
+    .option{background:var(--light);padding:40px;border-radius:20px}
+    .option h3{margin-bottom:12px}
+    .option a{display:inline-block;margin-top:20px;padding:14px 32px;border-radius:999px;background:var(--forest);color:white;text-decoration:none}
+
+    /* SCRIPTURE */
+    .scripture{background:white;padding:120px 24px;font-style:italic;font-size:26px}
+
+    footer{background:var(--forest);color:white;text-align:center;padding:60px}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Haven of Rest Logo">
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="#">CONTACT</a>
+    <a href="#">BLOG</a>
+    <a href="donate.html" class="donate-btn">DONATE</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Make an Eternal Difference</h1>
+    <p>Your generosity helps meet physical needs and share spiritual hope.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Why Give?</h2>
+  <p>
+    Every gift — regardless of size — helps provide care, education, health services,
+    and spiritual support to vulnerable and unreached communities.
+  </p>
+
+  <div class="donation-options">
+    <div class="option">
+      <h3>One-Time Gift</h3>
+      <p>Support immediate needs and ongoing ministry efforts.</p>
+      <a href="#">Donate Once</a>
+    </div>
+    <div class="option">
+      <h3>Monthly Partner</h3>
+      <p>Join us consistently and help sustain long-term impact.</p>
+      <a href="#">Give Monthly</a>
+    </div>
+    <div class="option">
+      <h3>Give Toward a Program</h3>
+      <p>Direct your gift to the Academy, Nursing Home, or Health Centre.</p>
+      <a href="#">Choose Program</a>
+    </div>
+  </div>
+</section>
+
+<div class="scripture">“Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.” — 2 Corinthians 9:7</div>
+
+<footer>© 2025 HAVEN OF REST · HEALTH & HOMESTEAD</footer>
+
+</body>
+</html>
