@@ -5,39 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Haven of Rest</title>
 
-  <!-- BRAND FONTS & FAVICON -->
+  <!-- Brand Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="favicon.png">
 
   <style>
     :root {
-      --white: #ffffff;
-      --light: #f9f9f9;
-      --forest: #55906d;
-      --black: #1a1a1a;
-      --gray: #666;
+      --white:#ffffff;
+      --light:#f5f5f5;
+      --sage:#a8c0b2;
+      --forest:#55906d;
+      --black:#000000;
+      --gray:#777777;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--black); line-height: 1.7; }
-    header { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; background: var(--white); border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-    header img { height: 42px; }
-    nav a { margin-left: 24px; text-decoration: none; font-size: 14px; letter-spacing: 1px; color: var(--black); }
-    .donate-btn { border: 1px solid var(--forest); padding: 10px 22px; border-radius: 999px; color: var(--forest); }
 
-    .hero { width: 100vw; min-height: 60vh; margin-left: calc(-50vw + 50%); background: url('about-hero.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
-    .hero-overlay { background: rgba(0,0,0,0.45); padding: 80px 48px; text-align: center; color: white; max-width: 900px; }
-    .hero h1 { font-size: 48px; margin-bottom: 16px; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Montserrat',sans-serif;line-height:1.7;color:var(--black);overflow-x:hidden}
 
-    .section { padding: 100px 24px; max-width: 1100px; margin: auto; }
-    .section h2 { text-align: center; font-size: 32px; margin-bottom: 24px; }
-    .section p { font-size: 18px; color: var(--gray); text-align: center; max-width: 800px; margin: auto 0 24px; }
+    header{display:flex;justify-content:space-between;align-items:center;padding:24px 48px;background:white;border-bottom:1px solid #eee;position:sticky;top:0;z-index:100}
+    header img{height:42px}
+    nav a{margin-left:24px;text-decoration:none;font-size:14px;letter-spacing:1px;color:black}
+    .donate{border:1px solid var(--forest);padding:10px 22px;border-radius:999px;color:var(--forest)}
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 60px; }
-    .card { background: var(--white); border-radius: 16px; padding: 32px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-    .card h3 { margin-bottom: 12px; }
-    .card p { color: var(--gray); font-size: 16px; }
+    /* HERO */
+    .hero{width:100vw;min-height:60vh;background:url('image1.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center}
+    .hero-overlay{background:rgba(0,0,0,.45);padding:80px 48px;text-align:center;color:white;max-width:1000px}
+    .hero h1{font-size:48px;margin-bottom:16px}
 
-    footer { background: var(--forest); color: var(--white); text-align: center; padding: 60px; }
+    section{padding:100px 24px;max-width:1100px;margin:auto}
+    section h2{text-align:center;font-size:36px;margin-bottom:24px}
+    section p{max-width:800px;margin:0 auto 24px;text-align:center;font-size:18px;color:#444}
+
+    /* TWO COLUMN */
+    .two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:60px;align-items:center;margin-top:60px}
+    .two-col img{width:100%;border-radius:20px}
+
+    /* VALUES */
+    .values{background:var(--light)}
+    .value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:60px}
+    .value{background:white;padding:40px;border-radius:20px}
+    .value h3{margin-bottom:12px}
+
+    /* CTA */
+    .cta{text-align:center}
+    .cta a{display:inline-block;margin-top:24px;padding:16px 36px;border-radius:999px;background:var(--forest);color:white;text-decoration:none}
+
+    footer{background:var(--forest);color:white;text-align:center;padding:60px}
   </style>
 </head>
 <body>
@@ -47,54 +60,51 @@
   <nav>
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
-    <a href="#">CONTACT</a>
-    <a href="#">BLOG</a>
-    <a href="donate.html" class="donate-btn">DONATE</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="blog.html">BLOG</a>
+    <a href="donate.html" class="donate">DONATE</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-overlay">
     <h1>About Haven of Rest</h1>
-    <p>Restoring dignity, hope, and purpose to every life we touch.</p>
+    <p>Rooted in faith. Committed to service. Focused on people.</p>
   </div>
 </section>
 
-<div class="section">
-  <h2>Who We Are</h2>
-  <p>Haven of Rest is a faith-rooted ministry committed to caring for vulnerable and unreached communities by meeting their physical, emotional, and spiritual needs.</p>
-</div>
-
-<div class="section" style="background: var(--light);">
-  <h2>Our Mission</h2>
-  <p>We serve with compassion, love, and excellence to uplift families and children everywhere we go. Every life has dignity and worth.</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Faith-First Approach</h3>
-      <p>We are grounded in scripture, guided by prayer, and led by service to others.</p>
-    </div>
-    <div class="card">
-      <h3>Holistic Care</h3>
-      <p>Health, education, shelter, and spiritual support — we meet needs with grace.</p>
-    </div>
-    <div class="card">
-      <h3>Community Partnership</h3>
-      <p>We work with local leaders, volunteers, and churches to build sustainable hope.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section">
+<section>
   <h2>Our Story</h2>
-  <p><!-- Your story text here — how Haven of Rest started, why you were called to this mission. --></p>
-</div>
+  <p><!-- ADD YOUR STORY TEXT HERE --></p>
+</section>
 
-<div class="section" style="background: var(--light);">
-  <h2>Our Vision & Impact</h2>
-  <p>We envision a world where every child knows safety, every family experiences dignity, and hope is tangible in every community served.</p>
-</div>
+<section>
+  <div class="two-col">
+    <div>
+      <h2>Our Mission</h2>
+      <p><!-- ADD MISSION TEXT HERE --></p>
+    </div>
+    <img src="image2.jpeg" alt="Haven of Rest mission work">
+  </div>
+</section>
+
+<section class="values">
+  <h2>Our Values</h2>
+  <div class="value-grid">
+    <div class="value"><h3>Faith</h3><p><!-- value text --></p></div>
+    <div class="value"><h3>Compassion</h3><p><!-- value text --></p></div>
+    <div class="value"><h3>Service</h3><p><!-- value text --></p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Be Part of the Story</h2>
+  <p>Your time, prayers, and generosity help transform lives.</p>
+  <a href="#">Get Involved</a>
+</section>
 
 <footer>© 2025 HAVEN OF REST · HEALTH & HOMESTEAD</footer>
 
 </body>
 </html>
+
